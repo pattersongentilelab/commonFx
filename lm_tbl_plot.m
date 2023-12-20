@@ -23,6 +23,6 @@ hold on
 errorbar(tbl.estimate(1:end-1),varNum(1:end-1),[],[],abs(diff([tbl.estimate(1:end-1) tbl.low95(1:end-1)],[],2)),abs(diff([tbl.estimate(1:end-1) tbl.hi95(1:end-1)],[],2)),'ok','MarkerFaceColor','k')
 plot([0 0],[varNum(1) varNum(end)],'--k')
 title('Model')
-ax = gca; ax.Box = 'on'; ax.YTick = varNum(1:end-1); ax.YTickLabels = tbl_95CI.Name(1:end-1); ax.YLim = [0 length(varNum)+1]; ax.XLim = [-20 20]; ax.XTick = -50:10:50;
+ax = gca; ax.Box = 'on'; ax.YTick = varNum(1:end-1); ax.YTickLabels = flipud(VarNames(2:end)); ax.YLim = [0 length(varNum)+1]; ax.XLim = [min(tbl.low95)*1.1 max(tbl.hi95)*1.1]; ax.XTick = -50:10:50;
 
 end
