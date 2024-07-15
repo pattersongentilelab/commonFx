@@ -89,5 +89,7 @@ cams.scores_pres = scores_pres;
 cams.scores_abs = scores_abs;
 cams.MCA_model = MCA;
 cams.MCA_score = MCA_score;
+cams.var_pres = var_pres;
+cams.var_abs = var_abs;
 
 end
